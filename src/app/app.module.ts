@@ -16,6 +16,7 @@ import { AppComponent } from './app.component';
 import { environment } from '@src/environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IndicatorsModule } from './shared/indicators';
+import { PopupsModule } from './shared/popups';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { IndicatorsModule } from './shared/indicators';
 
     IndicatorsModule,
     BrowserAnimationsModule,
+    PopupsModule
 
 
   ],
