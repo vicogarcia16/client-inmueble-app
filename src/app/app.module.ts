@@ -14,6 +14,9 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from '@src/environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IndicatorsModule } from './shared/indicators';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { environment } from '@src/environments/environment';
     AngularFireStorageModule,
     AngularFirestoreModule,
     AngularFireAuthModule,
+
+    IndicatorsModule,
+    BrowserAnimationsModule,
 
 
   ],
