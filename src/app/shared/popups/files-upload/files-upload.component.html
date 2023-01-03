@@ -4,6 +4,7 @@
   </div>
 
   <div class="files-upload__content">
+    <ng-container *ngIf="!files.length">
     <div class="dropzone" appDropzone (hovered)="toggleHover($event)" [class.dropzone__hovered]="isHovering" (dropped)="onDrop($event)">
       <div class="dropzone__label">Deja tus archivos aqui</div>
       <div class="dropzone__file">
@@ -13,11 +14,17 @@
         </label>
       </div>
     </div>
+    <div class="error" *ngIf="isError">
+      Seleccione un archivo
+    </div>
+  </ng-container>
+  <ng-container *ngIf="files">
+    <app-upload *ngFor="let file of files" [file]="file" (completed)="onUploadCompleted($event)"></app-upload>
+  </ng-container>
+
   </div>
 
-  <div class="error" *ngIf="isError">
-    Seleccione un archivo
-  </div>
+
 
   <div class="files-upload__footer"></div>
 </div>
