@@ -21,4 +21,8 @@ export class AppComponent implements OnInit {
   onToggleSpinner(): void {
     this.showSpinner = !this.showSpinner;
   }
+
+  onFilesChanged(urls: string|string[]): void {
+    console.log("urls", urls);
+  }
 }
