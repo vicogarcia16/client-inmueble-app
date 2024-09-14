@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IndicatorsModule } from './shared/indicators';
 import { PopupsModule } from './shared/popups';
 
+import { NotificationModule } from './services';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { PopupsModule } from './shared/popups';
 
     IndicatorsModule,
     BrowserAnimationsModule,
-    PopupsModule
+    PopupsModule,
+    NotificationModule.forRoot()
 
 
   ],
